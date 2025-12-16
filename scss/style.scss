@@ -105,10 +105,86 @@ main {
         font-size: 32px;
         line-height: 100%;
     }
+    @media (max-width: 768px) {
+        z-index: 10;
+    }
+
+    #burger-menu {
+        display: none;
+
+        &:checked ~ .burger-menu span {
+            transform: rotate(45deg);
+        }
+
+        &:checked ~ .burger-menu span::after {
+            transform: rotate(-90deg);
+        }
+
+        &:checked ~ .burger-menu span::after,
+        &:checked ~ .burger-menu span::before {
+            top: 0;
+            background-color: #000;
+        }
+
+        &:checked ~ .header-menu {
+            transform: translate(0);
+        }
+    }
+
+    .burger-menu {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 99;
+    }
+
+    .burger-menu span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 0;
+        transition: transform 0.3s ease-in-out;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &::before {
+            top: -8px;
+        }
+
+        &::after {
+            top: 8px;
+        }
+    }
 
     &-menu {
         @media (max-width: 768px) {
-            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9;
+            background-color: #fff;
+            padding: 100px 20px 20px;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
         }
 
         .menu {
@@ -117,6 +193,12 @@ main {
             align-items: center;
             justify-content: center;
             line-height: 100%;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 20px;
+                font-size: 34px;
+                color: #000;
+            }
 
             &-item {
                 transition: color 0.3s ease;
