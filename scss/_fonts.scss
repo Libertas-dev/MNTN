@@ -1,38 +1,33 @@
 @font-face {
-    font-display: swap;
-    font-family: 'Chronicle-Display-Bold';
+    font-family: 'Chronicle Display';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/Chronicle-Display-Bold.otf') format('otf');
+    src: url('../fonts/Chronicle-Display-Bold.otf') format('opentype');
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Chronicle-Display-Semibold';
+    font-family: 'Chronicle Display';
     font-style: normal;
     font-weight: 600;
-    src: url('../fonts/Chronicle-Display-Semibold.otf') format('otf');
+    src: url('../fonts/Chronicle-Display-Semibold.otf') format('opentype');
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Gilroy-Extrabold';
+    font-family: 'Gilroy';
     font-style: normal;
     font-weight: 800;
     src: url('../fonts/Gilroy-Extrabold.woff2') format('woff2');
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Gilroy-Bold';
+    font-family: 'Gilroy';
     font-style: normal;
     font-weight: 700;
     src: url('../fonts/Gilroy-Bold.woff2') format('woff2');
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Gilroy-Medium';
+    font-family: 'Gilroy';
     font-style: normal;
     font-weight: 500;
     src: url('../fonts/Gilroy-Medium.woff2') format('woff2');
