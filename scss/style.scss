@@ -132,14 +132,20 @@ main {
     }
 
     .burger-menu {
-        display: block;
-        width: 24px;
-        height: 24px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        position: relative;
-        z-index: 99;
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .burger-menu {
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 99;
+        }
     }
 
     .burger-menu span {
